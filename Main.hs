@@ -133,5 +133,5 @@ main = do
       putStrLn binPath
       exitWith $ ExitSuccess
     _ -> do
-      hPutStrLn stderr "Usage: cabal-temp-bin \"project's root directory\" \"executable-program-name\""
+      hPutStrLn stderr "Usage: cabal-test-bin \"project's root directory\" \"executable-program-name\""
       exitWith $ ExitFailure 1
