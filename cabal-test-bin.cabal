@@ -2,12 +2,20 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                cabal-test-bin
-version:             0.1.0
+version:             0.1.2
 synopsis:            A program for finding temporary build file during cabal-test.
-description:         cabal-test-bin finds exe-file for "cabal install --enable-tests --run-tests" or "cabal test".
-                     When a project uses cabal-sandbox, 
-                     cabal-test-bin checks both <project root>/dist/dist-sandbox-<hash>/build/<exe-file>/<exe-file> 
-                     and <project root>/dist/build/<exe-file>/<exe-file>.
+description:         cabal-test-bin finds exe-file for cabal test below
+                     .
+                     > cabal install --enable-tests --run-tests
+                     .
+                     > cabal test
+                     .
+                     When a project uses cabal-sandbox, cabal-test-bin checks following paths.
+                     .
+                     > <project root>/dist/dist-sandbox-<hash>/build/<exe-file>/<exe-file> 
+                     .
+                     > <project root>/dist/build/<exe-file>/<exe-file>
+                     .
                      
 license:             BSD3
 license-file:        LICENSE
