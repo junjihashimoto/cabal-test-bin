@@ -1,0 +1,12 @@
+language: haskell
+
+ghc:
+  - 7.8
+
+install:
+  - cabal update
+  - cabal install -j --only-dep --force-reinstalls
+
+script:
+  - cabal configure && cabal build
+
