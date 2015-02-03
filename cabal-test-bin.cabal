@@ -1,5 +1,5 @@
 name:                cabal-test-bin
-version:             0.1.4
+version:             0.1.5
 synopsis:            A program for finding temporary build file during cabal-test.
 description:         cabal-test-bin finds exe-file for cabal test below
                      .

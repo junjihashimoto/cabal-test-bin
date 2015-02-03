@@ -17,6 +17,6 @@ main = hspec $ do
       `catch`
       (\(_::SomeException) -> (getExePath "." "cabal-test-bin" `shouldReturnRegex` "./dist/dist-sandbox-(.*)/cabal-test-bin/cabal-test-bin"))
     it "getExeDir" $ do
-      (getExePath "." "cabal-test-bin" `shouldReturn` "./dist/build/cabal-test-bin")
+      (getExeDir "." "cabal-test-bin" `shouldReturn` "./dist/build/cabal-test-bin")
       `catch`
-      (\(_::SomeException) -> (getExePath "." "cabal-test-bin" `shouldReturnRegex` "./dist/dist-sandbox-(.*)/cabal-test-bin"))
+      (\(_::SomeException) -> (getExeDir "." "cabal-test-bin" `shouldReturnRegex` "./dist/dist-sandbox-(.*)/cabal-test-bin"))
