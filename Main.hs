@@ -11,7 +11,7 @@ main = do
   args <- getArgs
   case args of
     (dir:binName:[]) -> do
-      eBinPath <- E.try $ searchBinary dir binName
+      eBinPath <- E.try $ getExePath dir binName
       case eBinPath of
         Right binPath -> do
           putStrLn binPath
